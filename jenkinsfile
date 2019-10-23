@@ -1,0 +1,18 @@
+node {
+    stage('MyStage') {
+        ansibleTower(
+            towerServer: 'awx',
+            templateType: 'job',
+            jobTemplate: 'docker',
+            importTowerLogs: true,
+            inventory: 'Demo Inventory',
+            jobTags: '',
+            skipJobTags: '',
+            limit: '',
+            removeColor: false,
+            verbose: true,
+            credential: '',
+            async: false
+        )
+    }
+}
